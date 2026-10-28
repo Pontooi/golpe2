@@ -1,0 +1,14 @@
+{
+  "nome": "Isso é golpe?",
+  "descricao": "Ferramenta demonstrativa que destaca padrões suspeitos em mensagens e oferece orientações de segurança.",
+  "idioma": "pt-BR",
+  "arquivos": {
+    "html": "index.html",
+    "css": "style.css",
+    "javascript": "script.js"
+  },
+  "observacoes": [
+    "A análise acontece localmente no navegador.",
+    "A ferramenta usa regras e padrões de texto; não consegue garantir se uma mensagem é ou não golpe."
+  ]
+}

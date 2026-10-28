@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isso é golpe?</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="col">
+    <a class="name" href="#">Isso é golpe?</a>
+    <nav><a href="#golpes">Tipos de golpe</a><a href="#ja-caí">Já caí</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="col">
+  <h1>Recebeu uma mensagem que parece golpe?</h1>
+  <p class="lead">Cole o texto abaixo. As partes que costumam aparecer em golpes ficam marcadas, cada uma com a explicação.</p>
+
+  <label for="msg">Texto da mensagem</label>
+  <textarea id="msg" placeholder="Ex.: Sua encomenda está retida. Pague uma taxa neste link..."></textarea>
+  <label class="opt"><input type="checkbox" id="ia"> Pedir também uma segunda opinião da IA (o texto é enviado ao nosso servidor e ao Hugging Face)</label>
+  <button class="go" id="go">Marcar partes suspeitas</button>
+  <p class="tries">Testar com um exemplo:
+    <button class="link" data-t="Sua conta será bloqueada hoje. Clique neste link e confirme sua senha imediatamente.">conta bloqueada</button>
+    <button class="link" data-t="Parabéns! Você foi selecionado para uma vaga. Pague uma taxa de cadastro para garantir sua contratação.">vaga de emprego</button>
+    <button class="link" data-t="Oi, sou eu. Troquei de número. Preciso que você faça um Pix urgente e depois explico.">pedido de Pix</button>
+  </p>
+  <p class="fine">Não cole senhas, códigos recebidos por SMS nem dados de cartão. Com a segunda opinião da IA desligada, o texto não sai do seu navegador. A checagem procura palavras e padrões conhecidos: uma mensagem sem marcações ainda pode ser golpe.</p>
+
+  <div id="out" aria-live="polite" hidden></div>
+
+  <section id="golpes">
+    <h2>Golpes que se repetem</h2>
+    <p class="lead">Toque em um para ver o que conferir.</p>
+    <details>
+      <summary>Parente com número novo pedindo Pix</summary>
+      <div><p>A pessoa diz que trocou de número e pede uma transferência com pressa, prometendo explicar depois.</p>
+      <ul><li>Ligue para o número antigo, o que já estava na sua agenda.</li><li>Pergunte algo que só a pessoa de verdade saberia, sem dar a resposta na pergunta.</li><li>Fale com outro parente antes de transferir qualquer valor.</li></ul></div>
+    </details>
+    <details>
+      <summary>Encomenda retida, taxa para liberar</summary>
+      <div><p>Chega um link dizendo que o pacote parou e que falta pagar uma taxa.</p>
+      <ul><li>Não abra o link. Entre no app ou no site da loja digitando o endereço você mesmo.</li><li>Veja se o pedido realmente mostra alguma cobrança pendente.</li><li>Nunca informe cartão em página que chegou por mensagem.</li></ul></div>
+    </details>
+    <details>
+      <summary>Vaga de emprego que cobra para contratar</summary>
+      <div><p>A empresa aprova você rápido e pede dinheiro para cadastro, treinamento ou uniforme.</p>
+      <ul><li>Emprego de verdade não cobra para contratar.</li><li>Procure a empresa por conta própria e confirme se a vaga existe.</li><li>Não mande foto de documento antes de saber para quem está mandando.</li></ul></div>
+    </details>
+    <details>
+      <summary>Banco avisando que a conta vai ser bloqueada</summary>
+      <div><p>A mensagem ameaça bloquear a conta e pede senha, código ou um clique.</p>
+      <ul><li>Feche a mensagem e abra o aplicativo do banco.</li><li>Se quiser falar com alguém, ligue para o número que está no cartão.</li><li>Banco não pede senha nem código por mensagem.</li></ul></div>
+    </details>
+    <details>
+      <summary>Prêmio que você não lembra de ter disputado</summary>
+      <div><p>Você “ganhou” algo, mas precisa pagar uma taxa ou passar seus dados para receber.</p>
+      <ul><li>Pergunte-se se participou de alguma promoção.</li><li>Prêmio de verdade não exige pagamento para ser entregue.</li><li>Confira o regulamento no site oficial da empresa.</li></ul></div>
+    </details>
+    <details>
+      <summary>Pedido de código que chegou por SMS</summary>
+      <div><p>Alguém diz que mandou um código sem querer e pede que você repasse. Esse código dá acesso à sua conta.</p>
+      <ul><li>Não repasse o código a ninguém, mesmo que a pessoa pareça conhecida.</li><li>Se o contato é de alguém que você conhece, ligue para ela antes.</li><li>Ative a verificação em duas etapas nos seus aplicativos.</li></ul></div>
+    </details>
+  </section>
+</div>
+
+<div class="after" id="ja-caí">
+  <div class="col">
+    <h2>Já cliquei, paguei ou passei meus dados</h2>
+    <p>Acontece com gente atenta também. O que importa agora é a rapidez.</p>
+    <ul>
+      <li><strong>Mandou dinheiro.</strong> Ligue para o banco agora, pelo número oficial, e conte o que houve. Se foi Pix, peça a abertura do MED, o mecanismo de devolução do Pix.</li>
+      <li><strong>Passou senha ou código.</strong> Troque a senha de um aparelho confiável, saia das sessões abertas e ative a verificação em duas etapas.</li>
+      <li><strong>Instalou um aplicativo estranho.</strong> Apague o app, desconecte o celular da internet se algo parecer errado e procure alguém de confiança para revisar o aparelho.</li>
+      <li><strong>Guarde tudo.</strong> Salve prints, comprovantes e números de protocolo. Registre um boletim de ocorrência e, se a fraude envolveu uma empresa, reclame em consumidor.gov.br.</li>
+    </ul>
+  </div>
+</div>
+</main>
+
+<footer>
+  <div class="col">Projeto de demonstração. Na dúvida, use sempre o telefone que está impresso no cartão ou no site oficial.</div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

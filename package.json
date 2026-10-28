@@ -1,0 +1,8 @@
+{
+  "name": "isso-e-golpe",
+  "version": "1.0.0",
+  "description": "Marca padrões suspeitos em mensagens e, opcionalmente, pede uma segunda opinião a um modelo do Hugging Face.",
+  "main": "server.js",
+  "scripts": { "start": "node server.js" },
+  "engines": { "node": ">=18" }
+}
